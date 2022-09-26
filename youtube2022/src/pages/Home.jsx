@@ -12,11 +12,25 @@ const Home = ({type}) => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    const fetchVideos = async () => {
-      const res = await axios.get(`/videos/${type}`);
-      setVideos(res.data);
-    };
-    fetchVideos();
+    if(type){
+      try {
+        console.log("Type",type)
+        const fetchVideos = async () => {
+          const res = await axios.get(`/videos/${type}`);
+          setVideos(res.data);
+        };
+        fetchVideos();
+        
+      } catch (error) {
+        console.log(error)
+      } 
+    }
+    
+    // const fetchVideos = async () => {
+    //   const res = await axios.get(`/videos/${type}`);
+    //   setVideos(res.data);
+    // };
+    // fetchVideos();
   }, [type]);
 
   return (

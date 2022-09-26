@@ -155,12 +155,14 @@ const Video = () => {
     dispatch(subscription(channel._id));
   };
 
+  console.log("url ",currentVideo.videoUrl)
   //TODO: DELETE VIDEO FUNCTIONALITY
 
   return (
     <Container>
       <Content>
         <VideoWrapper>
+        <iframe src="https://youtu.be/CCF-xV3RSSs"  title="Iframe Example"></iframe>
           <VideoFrame src={currentVideo.videoUrl} controls />
         </VideoWrapper>
         <Title>{currentVideo.title}</Title>
