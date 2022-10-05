@@ -22,16 +22,19 @@ import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightne
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 const Container = styled.div`
+  /* display: flex; */
   flex: 1;
   background-color: ${({ theme }) => theme.bgLighter};
-  height: 100vh;
+  /* height: 100vh; */
   color: ${({ theme }) => theme.text};
   font-size: 14px;
-  position: sticky;
+  /* position: sticky; */
   top: 0;
 `;
 const Wrapper = styled.div`
   padding: 18px 26px;
+  height: 100vh;
+
 `;
 const Logo = styled.div`
   display: flex;

@@ -24,7 +24,10 @@ const Container = styled.div`
 const Content = styled.div`
   flex: 5;
 `;
-const VideoWrapper = styled.div``;
+const VideoWrapper = styled.div`
+
+
+`;
 
 const Title = styled.h1`
   font-size: 18px;
@@ -113,7 +116,6 @@ const Subscribe = styled.button`
 const VideoFrame = styled.video`
   max-height: 720px;
   width: 100%;
-  object-fit: cover;
 `;
 
 const Video = () => {
@@ -162,7 +164,7 @@ const Video = () => {
     <Container>
       <Content>
         <VideoWrapper>
-        <iframe src="https://youtu.be/CCF-xV3RSSs"  title="Iframe Example"></iframe>
+        <iframe src="https://youtu.be/CCF-xV3RSSs" ></iframe>
           <VideoFrame src={currentVideo.videoUrl} controls />
         </VideoWrapper>
         <Title>{currentVideo.title}</Title>
